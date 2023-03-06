@@ -36,7 +36,7 @@ public class CoffeeControllerTest {
 
     @Test
     public void testCoffeeControllerWithNoFoundCoffee() throws Exception {
-        var expected = "{\"message\":\"No Coffee of this type\",\"status\":\"404\"}";
+        var expected = "{\"message\":\"No Coffee of of this type exists notfound\",\"status\":\"404\"}";
         this.mockController
                 .perform(MockMvcRequestBuilders.get("/coffee?name=notfound"))
                 .andExpect(MockMvcResultMatchers.status().isNotFound())
